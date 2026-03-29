@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Notícias por ano</title>
+</head>
+<body>
+<h1>Notícias publicadas em {{ano}}</h1>
+<ul>
+    {% for noticia in noticias %}
+    <li><a href="/noticias/{{noticia.id}}/">{{noticia.titulo}}</a></li>
+    {% empty %}
+    <p>Não há notícias publicadas neste ano</p>
+    {% endfor %}
+</ul>
+</body>
+</html>
